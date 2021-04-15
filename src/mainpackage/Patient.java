@@ -5,6 +5,7 @@ public class Patient extends Users{
 
 
     public String getAmka() {
+
         return amka;
     }
     public void setAmka(String amka) {
