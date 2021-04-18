@@ -8,6 +8,7 @@ public class Users {
     private String userType;
     public static int userCounter=0;
 
+// Getters and Setters
     public String getUsername() {
         return username;
     }
@@ -39,6 +40,7 @@ public class Users {
         this.userType = userType;
     }
 
+//Constructor
     public Users(String username, String name,String surname,String password,String userType) {
         userCounter++;
         this.setName(name);
@@ -54,6 +56,7 @@ public class Users {
 
     }
     public void Logout() {
+        System.out.println(this.getUsername()+" has logged out.");
 
     }
 }
