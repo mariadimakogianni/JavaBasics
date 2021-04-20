@@ -11,7 +11,6 @@ import java.io.FileInputStream;
 public class CreateUsers {
     public static void main(String[] args) {
         Admin Fridy = new Admin("Fridy", "Dio", "Magos", "Koutsobolis", "Admin");
-
         String path;
 
         try {
@@ -42,10 +41,10 @@ public class CreateUsers {
                 System.out.println("Password: " + password);
                 System.out.println("Amka: " + amka);
 
-                Patient alkinoos = new Patient(username, name, surname, password, userType, amka);
+                Patient asthenis = new Patient(username, name, surname, password, userType, amka);
 
 
-            } else {
+            } else if (userType.equals(d))  {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Username: ");
                 String username = sc.nextLine();
@@ -65,9 +64,12 @@ public class CreateUsers {
                 System.out.println("Specialty: " + specialty);
 
 
-                Doctor maira = new Doctor(username, name, surname, password, userType, specialty);
+
+                Doctor doc = new Doctor(username, name, surname, password, userType, specialty);
 
             }
+            else
+                System.out.println("you didnt put the right type");
         } catch (Exception e) {
             System.out.println("oops something went wrong");
         }
