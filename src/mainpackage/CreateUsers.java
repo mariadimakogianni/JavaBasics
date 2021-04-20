@@ -70,6 +70,8 @@ public class CreateUsers {
             }
             else
                 System.out.println("you didnt put the right type");
+
+
         } catch (Exception e) {
             System.out.println("oops something went wrong");
         }
@@ -81,8 +83,18 @@ public class CreateUsers {
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                System.out.println(data);
+                String[] parts = data.split(" ");
+                String username= parts[0];
+                String name= parts[1];
+                String surname= parts[2];
+                String password= parts[3];
+                String amka= parts[4];
+                String userType = "patient";
+                Patient asthen = new Patient(username, name, surname, password, userType, amka);
+                System.out.println(asthen.getName());
+
             }
+
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
